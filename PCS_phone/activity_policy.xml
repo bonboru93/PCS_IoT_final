@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_policy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.a506r05922142.pcs_sms_phone.PolicyActivity">
+
+    <TextView
+        android:text="COOLER:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView5"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:text="FROM:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/cooler_low"
+        android:text="20"
+        android:layout_below="@+id/textView5"
+        android:layout_alignEnd="@+id/humidifier_low"
+        android:layout_toEndOf="@+id/textView7" />
+
+    <TextView
+        android:text="TO:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView18"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignTop="@+id/textView18"
+        android:layout_toEndOf="@+id/textView18"
+        android:id="@+id/cooler_high"
+        android:text="25" />
+
+    <TextView
+        android:text="FROM:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView22"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView24"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/heater_low"
+        android:layout_alignBaseline="@+id/heater_high"
+        android:layout_alignBottom="@+id/heater_high"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_toStartOf="@+id/textView18"
+        android:text="20" />
+
+    <TextView
+        android:text="TO:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_toEndOf="@+id/cooler_low"
+        android:id="@+id/textView25"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/heater_high"
+        android:text="25"
+        android:layout_alignTop="@+id/textView25"
+        android:layout_toEndOf="@+id/textView25" />
+
+    <TextView
+        android:text="FROM:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView26"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView27"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/humidifier_low"
+        android:text="20"
+        android:layout_alignBaseline="@+id/textView27"
+        android:layout_alignBottom="@+id/textView27"
+        android:layout_alignEnd="@+id/aircleaner_low"
+        android:layout_toEndOf="@+id/textView27" />
+
+    <TextView
+        android:text="TO:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView32"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/humidifier_low"
+        android:layout_alignBottom="@+id/humidifier_low"
+        android:layout_toEndOf="@+id/humidifier_low" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/humidifier_high"
+        android:layout_alignBaseline="@+id/textView32"
+        android:layout_alignBottom="@+id/textView32"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView35" />
+
+    <TextView
+        android:text="FROM:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView29"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView30"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/dehumidifier_low"
+        android:text="20"
+        android:layout_below="@+id/textView29"
+        android:layout_alignEnd="@+id/heater_low"
+        android:layout_toEndOf="@+id/textView30" />
+
+    <TextView
+        android:text="TO:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView28"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView29"
+        android:layout_toEndOf="@+id/humidifier_low" />
+
+    <TextView
+        android:text="FROM:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView33"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView34"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/aircleaner_low"
+        android:text="20"
+        android:layout_alignTop="@+id/textView35"
+        android:layout_alignEnd="@+id/dehumidifier_low"
+        android:layout_toEndOf="@+id/textView34" />
+
+    <TextView
+        android:text="TO:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView34"
+        android:layout_toEndOf="@+id/aircleaner_low"
+        android:id="@+id/textView35"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/aircleaner_high"
+        android:layout_alignTop="@+id/textView35"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/dehumidifier_high" />
+
+    <TextView
+        android:text="LIGHT:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView36"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/aircleaner_low"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="FROM:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView37"
+        android:layout_below="@+id/textView36"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/light_low"
+        android:text="20"
+        android:layout_alignBaseline="@+id/textView38"
+        android:layout_alignBottom="@+id/textView38"
+        android:layout_toStartOf="@+id/textView38"
+        android:layout_toEndOf="@+id/textView37"/>
+
+    <TextView
+        android:text="TO:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView38"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView36"
+        android:layout_toEndOf="@+id/aircleaner_low" />
+
+    <Button
+        android:text="SET VIA SMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/set_via_sms"
+        android:layout_alignEnd="@+id/light_low"
+        android:onClick="sendPolicy" />
+
+    <Button
+        android:text="SET VIA AWS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/set_via_sms"
+        android:id="@+id/set_via_aws"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView38"
+        android:onClick="sendPolicy"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/light_high"
+        android:layout_alignBaseline="@+id/textView38"
+        android:layout_alignBottom="@+id/textView38"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView38" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/dehumidifier_high"
+        android:text="25"
+        android:layout_alignTop="@+id/textView28"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView28" />
+
+    <TextView
+        android:text="HEATER:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView22"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/cooler_low"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="HUMIDIFIER:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView26"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/heater_low"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="DEHUMIDIFIER:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView29"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/humidifier_low"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="AIRCLEANER:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView33"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/dehumidifier_low"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

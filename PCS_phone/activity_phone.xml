@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_phone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.a506r05922142.pcs_sms_phone.PhoneActivity">
+
+    <TextView
+        android:text="Sensor Data:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView"
+        android:textSize="24sp"
+        android:layout_toStartOf="@+id/button" />
+
+    <TextView
+        android:text="Device Status:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:textSize="24sp"
+        android:layout_toStartOf="@+id/button15" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="18sp"
+        android:text="COOLER: "
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text="CLOSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cooler_open"
+        android:layout_toEndOf="@+id/cooler_open"
+        android:id="@+id/cooler_close"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:onClick="sendSwitch"/>
+
+    <TextView
+        android:text="AIRCLEANER:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cooler_open"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView8"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="HUMIDIFIER:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aircleaner_open"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView9"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text=" OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aircleaner_close"
+        android:layout_toEndOf="@+id/textView9"
+        android:id="@+id/humidifier_status"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text=" OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_toEndOf="@+id/textView13"
+        android:id="@+id/heater_status"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text=" OPEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:id="@+id/heater_open"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:onClick="sendSwitch" />
+
+    <Button
+        android:text="CLOSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/heater_open"
+        android:layout_toEndOf="@+id/heater_open"
+        android:id="@+id/heater_close"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:onClick="sendSwitch" />
+
+    <TextView
+        android:text="LIGHT:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/aircleaner_close"
+        android:layout_alignStart="@+id/heater_open"
+        android:id="@+id/textView15"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text=" OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView15"
+        android:layout_toEndOf="@+id/textView15"
+        android:id="@+id/light_status"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text=" OPEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/light_open"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_below="@+id/textView15"
+        android:layout_alignStart="@+id/textView15"
+        android:onClick="sendSwitch" />
+
+    <Button
+        android:text="CLOSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/light_status"
+        android:layout_toEndOf="@+id/light_open"
+        android:id="@+id/light_close"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:onClick="sendSwitch" />
+
+    <Button
+        android:text="send via sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button15"
+        android:layout_above="@+id/textView13"
+        android:layout_alignParentEnd="true"
+        android:onClick="changeCmdPath"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:text="get  via  SMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:onClick="sendRequest"/>
+
+    <TextView
+        android:text="  Auto generated from AWS IOT "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView19"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/button" />
+
+    <Button
+        android:text="CLOSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aircleaner_close"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_alignBaseline="@+id/aircleaner_open"
+        android:layout_alignBottom="@+id/aircleaner_open"
+        android:layout_toEndOf="@+id/aircleaner_open"
+        android:onClick="sendSwitch" />
+
+    <Button
+        android:text=" OPEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cooler_open"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:onClick="sendSwitch"/>
+
+    <Button
+        android:text=" OPEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aircleaner_open"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentStart="true"
+        android:onClick="sendSwitch"/>
+
+    <Button
+        android:text=" OPEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentStart="true"
+        android:id="@+id/humidifier_open"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:onClick="sendSwitch"/>
+
+    <Button
+        android:text="CLOSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_toEndOf="@+id/humidifier_open"
+        android:id="@+id/humidifier_close"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:onClick="sendSwitch"/>
+
+    <TextView
+        android:text="DEHUMIDI:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/humidifier_status"
+        android:layout_alignStart="@+id/light_open"
+        android:id="@+id/textView21"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text=" OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/light_close"
+        android:layout_toEndOf="@+id/textView21"
+        android:id="@+id/dehumidifier_status"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text=" OPEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView21"
+        android:layout_alignStart="@+id/textView21"
+        android:id="@+id/dehumidi_open"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:onClick="sendSwitch" />
+
+    <Button
+        android:text="CLOSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dehumidi_close"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_below="@+id/textView21"
+        android:layout_toEndOf="@+id/dehumidi_open"
+        android:onClick="sendSwitch" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cooler_status"
+        android:text=" OFF"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textView3"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:text=" OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aircleaner_status"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/cooler_close"
+        android:layout_toEndOf="@+id/cooler_status" />
+
+    <TextView
+        android:text="HEATER:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13"
+        android:layout_marginStart="43dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textView3"
+        android:layout_toEndOf="@+id/aircleaner_status" />
+
+    <TextView
+        android:text="No Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView20"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="9dp"
+        android:layout_toStartOf="@+id/button23" />
+
+    <Button
+        android:text="->set policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button23"
+        android:layout_below="@+id/textView19"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView19"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textColor="@color/colorPrimary"
+        android:onClick="setPolicy"/>
+
+</RelativeLayout>
