@@ -322,7 +322,7 @@ myAWSIoTMQTTClient.subscribe("$aws/things/Policy/shadow/update", 1, handlePolicy
 
 
 # *********************************************************************
-# ......................AWSIOT MQTT init...............................
+# ......................Thingspeak upload.............................
 # *********************************************************************
 ApiKey = "CH12TQWQNUJ4ZH78"
 def post_to_thingspeak(payload):
